@@ -1,10 +1,10 @@
-pkg load symbolic
 syms x
 func= input('Introduce la funcion: ','s');
 f= inline(func);
 d= input('Desde: ');
 h= input('Hasta: ');
-p = input('p: ');
+n = input('n: ');
+p = (h - d)/n;
 disp('X - F(X)')
 i=1;
 for x= d:p:h
@@ -14,7 +14,7 @@ for x= d:p:h
     y(1,i)=r;
     i=i+1;
 end
-graph= input('Trazar grafica s/n = 0: ','s');
+graph= input('Trazar grafica s/n: ','s');
 if graph == 's'
   plot(z,y)
  end
